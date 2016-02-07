@@ -59,16 +59,16 @@ set -o pipefail
 
 
 clear
-echo -e "\e[32mSTEP (1 of 6): Installing Java, Scala, Python\e[0m"
+echo -e "\e[32mSTEP (1 of 6): Installing Java, Scala, Python, sbt\e[0m"
 echo -e "\e[32m##############################################\n\e[0m"
 sleep 2s
 
 if [ -f /etc/redhat-release ]; then
   sudo yum clean expire-cache
-  sudo yum install -y java-*-openjdk-devel scala python
+  sudo yum install -y java-*-openjdk-devel scala python sbt
 elif [ -f /etc/debian_version ]; then
   sudo apt-get update
-  sudo apt-get install -y default-jdk scala python
+  sudo apt-get install -y default-jdk scala python sbt
 else
   lsb_release -si
   echo "\e[31mCan't use yum or apt-get, check installation script.\n\e[0m"
@@ -123,24 +123,26 @@ export SPARK_HOME=/usr/local/spark
 export PATH=$PATH:$SPARK_HOME/bin
 #SPARK VARIABLES END
 EOT
-source ~/.bashrc || true
 
 cp /usr/local/spark/conf/spark-env.sh.template /usr/local/spark/conf/spark-env.sh
 cat << EOT >> /usr/local/spark/conf/spark-env.sh
 export SPARK_DIST_CLASSPATH=$(/usr/local/hadoop/bin/hadoop classpath)
+export HADOOP_CONF_DIR=/usr/local/hadoop/etc/hadoop
 EOT
 set +x
 
 
 
+source ~/.bashrc &>/dev/null
+
 clear
 echo -e "\e[32m
-Pig installation was successful!
+Spark installation was successful!
 Open a new terminal and execute:
   $ spark-shell -help
 \e[0m"
 
 
 
-#echo -e "Show Pig help\n"
-#/usr/local/pig/bin/pig -help
+#echo -e "Show Spark shell help\n"
+#/usr/local/spark/bin/spark-shell -help
