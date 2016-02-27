@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Icon=text-html
+Type=Link
+Name=Amazon review data
+URL=http://jmcauley.ucsd.edu/data/amazon/
+Name[en_IN]=Link-Amazon_review_data
+
+[InternetShortcut]
+URL=http://jmcauley.ucsd.edu/data/amazon/

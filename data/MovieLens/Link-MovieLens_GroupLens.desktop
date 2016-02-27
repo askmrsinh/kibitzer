@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Icon=text-html
+Type=Link
+Name=MovieLens  GroupLens
+URL=http://grouplens.org/datasets/movielens/
+Name[en_IN]=Link-MovieLens_GroupLens
+
+[InternetShortcut]
+URL=http://grouplens.org/datasets/movielens/
