@@ -1,0 +1,19 @@
+*.iml
+*.ipr
+*.iws
+*.tmproj
+*.swp
+*~
+.DS_Store
+.classpath
+.generators
+.idea
+.project
+.settings
+**/target
+target
+# TODO fix this
+core/test.txt
+core/test2.txt
+core/test3.txt
+build
