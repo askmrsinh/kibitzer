@@ -32,22 +32,22 @@ f = open("../data/Amazon/meta_Movies_and_TV.json", 'w')
 for l in parse("../data/Amazon/meta_Movies_and_TV.json.gz"):
   f.write(l + '\n')
   
-f = open("../data/Amazon/review_Amazon_Instant_Video.json", 'w')
-for l in parse("../data/Amazon/review_Amazon_Instant_Video.json.gz"):
+f = open("../data/Amazon/reviews_Amazon_Instant_Video.json", 'w')
+for l in parse("../data/Amazon/reviews_Amazon_Instant_Video.json.gz"):
   f.write(l + '\n')
   
-f = open("../data/Amazon/review_Books.json", 'w')
-for l in parse("../data/Amazon/review_Books.json.gz"):
+f = open("../data/Amazon/reviews_Books.json", 'w')
+for l in parse("../data/Amazon/reviews_Books.json.gz"):
   f.write(l + '\n')
   
-f = open("../data/Amazon/review_CDs_and_Vinyl.json", 'w')
-for l in parse("../data/Amazon/review_CDs_and_Vinyl.json.gz"):
+f = open("../data/Amazon/reviews_CDs_and_Vinyl.json", 'w')
+for l in parse("../data/Amazon/reviews_CDs_and_Vinyl.json.gz"):
   f.write(l + '\n')
   
-f = open("../data/Amazon/review_Digital_Music.json", 'w')
-for l in parse("../data/Amazon/review_Digital_Music.json.gz"):
+f = open("../data/Amazon/reviews_Digital_Music.json", 'w')
+for l in parse("../data/Amazon/reviews_Digital_Music.json.gz"):
   f.write(l + '\n')
   
-f = open("../data/Amazon/review_Movies_and_TV.json", 'w')
-for l in parse("../data/Amazon/review_Movies_and_TV.json.gz"):
+f = open("../data/Amazon/reviews_Movies_and_TV.json", 'w')
+for l in parse("../data/Amazon/reviews_Movies_and_TV.json.gz"):
   f.write(l + '\n')
