@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
-curl "http://sisinflab.poliba.it/events/lod-recsys-challenge-2015/eswc2015-lod-recsys-challenge-v1.0-TRAINING.zip" -o demo_dataset.zip
+FILE="demo_dataset.zip"
+
+if [[ ! -f "$FILE" ]]; then
+  echo -e "\e[34mDownloading file \`$FILE'; this may take a few minutes.\e[0m"
+  curl "http://sisinflab.poliba.it/events/lod-recsys-challenge-2015/eswc2015-lod-recsys-challenge-v1.0-TRAINING.zip" -o "$FILE"
+else
+  echo -e "\e[34mFile \`$FILE' already there; not retrieving.\e[0m"
+fi
+
+rm -rf *.dat
 
 unzip demo_dataset.zip; rm -rf demo_dataset.zip
 cd eswc2015-lod-recsys-challenge-v1.0-TRAINING; mv items* training* ../;  cd ../; rm -rf eswc2015-lod-recsys-challenge-v1.0-TRAINING
@@ -13,6 +22,9 @@ gawk -i inplace -F "\t" '{gsub("mu","68",$1)}1' items_music.dat
 gawk -i inplace -F "\t" '{gsub("u","",$1);gsub("bo","26",$2)}1' training_likes_books.dat
 gawk -i inplace -F "\t" '{gsub("u","",$1);gsub("mo","66",$2)}1' training_likes_movies.dat
 gawk -i inplace -F "\t" '{gsub("u","",$1);gsub("mu","68",$2)}1' training_likes_music.dat
+
+#make sure fields are seprated by tab
+sed -i -e 's/ /\t/g' *.dat
 
 give_random_ratings () {
   while read line
@@ -42,4 +54,3 @@ rm -rf training_*
 mv items_books.dat demo_items_books.dat
 mv items_movies.dat demo_items_movies.dat
 mv items_music.dat demo_items_music.dat
-sed -i -e 's/ /\t/g' *.dat
