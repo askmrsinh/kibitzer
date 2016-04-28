@@ -1,0 +1,16 @@
+{
+    "name": "ashesh/kibitzer-user-interface",
+    "description": "Web User Interface for Kibitzer RS.",
+    "type": "project",
+    "require": {
+        "semsol/arc2": "^2.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ashesh Kumar Singh",
+            "email": "user501254@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
