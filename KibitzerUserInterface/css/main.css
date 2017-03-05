@@ -1,0 +1,27 @@
+h1 {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 400;
+  line-height: 46px;
+  font-size: 46px;
+  margin: 0 0 23px 0;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 23px 0;
+}
+
+.brand {
+  font-family: 'Bitter', serif;
+  font-weight: 700;
+  font-size: 82px !important;
+  color: black;
+  text-align: center
+}
+
+.navbar-brand.brand {
+  font-size: 28px !important;
+}
