@@ -1,6 +1,6 @@
-REGISTER elephant-bird-elephant-bird-4.13/hadoop-compat/target/elephant-bird-hadoop-compat-4.13.jar;
-REGISTER elephant-bird-elephant-bird-4.13/core/target/elephant-bird-core-4.13-thrift9.jar;
-REGISTER elephant-bird-elephant-bird-4.13/pig/target/elephant-bird-pig-4.13.jar;
+REGISTER dependencies/elephant-bird-elephant-bird-4.13/hadoop-compat/target/elephant-bird-hadoop-compat-4.13.jar;
+REGISTER dependencies/elephant-bird-elephant-bird-4.13/core/target/elephant-bird-core-4.13-thrift9.jar;
+REGISTER dependencies/elephant-bird-elephant-bird-4.13/pig/target/elephant-bird-pig-4.13.jar;
 
 
 -- Amazon_Instant_Video
